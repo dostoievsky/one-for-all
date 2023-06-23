@@ -25,7 +25,7 @@ jobs:
       - name: Set the class.json on repo
         run: |
           mkdir data
-          echo "${{ secrets.CLASS_JSON }}" > data/class.json
+          echo '${{ secrets.CLASS_JSON }}' > data/class.json
 
       - name: Build Docker image
         run: docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
